@@ -105,3 +105,10 @@ li:hover {
     color: #b52b27;
 }
 
+/* Estilos de tarea completada*/
+.completed {
+    text-decoration: line-through;
+    color: #28a745 !important;
+    font-weight: 600;
+    opacity: 0.8;
+}
