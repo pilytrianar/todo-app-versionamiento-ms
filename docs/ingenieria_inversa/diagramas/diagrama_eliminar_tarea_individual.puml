@@ -1,0 +1,27 @@
+@startuml
+skinparam backgroundColor #FAFAFA
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #0D47A1
+}
+skinparam decision {
+  BackgroundColor #FFF8E1
+  BorderColor #F57F17
+}
+skinparam arrow {
+  Color #1A237E
+}
+
+start
+:Usuario hace clic en "Completada";
+:Identificar <li> y texto (.task-text);
+:Togglear clase "completed";
+
+if (¿La tarea queda completada?) then (Sí)
+  :Mover tarea al final de la lista;
+else (No)
+  :Mover tarea al inicio de la lista;
+endif
+
+stop
+@enduml
