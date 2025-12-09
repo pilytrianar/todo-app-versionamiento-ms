@@ -1,0 +1,23 @@
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam activity {
+  BackgroundColor #FFF3E0
+  BorderColor #EF6C00
+}
+skinparam arrow {
+  Color #E65100
+}
+
+start
+:Usuario hace clic en "Eliminar tareas completadas";
+:Buscar todas las tareas con clase "completed";
+
+if (¿Hay tareas completadas?) then (Sí)
+  :Recorrer lista de tareas completadas;
+  :Eliminar cada <li> marcado;
+else (No)
+  :No se realiza ninguna acción;
+endif
+
+stop
+@enduml

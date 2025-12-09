@@ -1,0 +1,31 @@
+@startuml
+skinparam backgroundColor #F9F9F9
+skinparam activity {
+    BackgroundColor #E0F7FA
+    BorderColor #00796B
+    FontColor #004D40
+}
+skinparam decision {
+    BackgroundColor #FFF3E0
+    BorderColor #EF6C00
+}
+skinparam arrow {
+    Color #303F9F
+}
+
+start
+:Usuario escribe una tarea;
+:Sistema recibe el texto;
+
+if (¿El texto está vacío?) then (Sí)
+  :Mostrar alerta "No se puede agregar una tarea vacía";
+  stop
+else (No)
+  :Crear elemento <li>;
+  :Insertar tarea en la lista;
+endif
+
+:Limpiar el campo de entrada;
+
+stop
+@enduml
